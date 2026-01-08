@@ -409,7 +409,7 @@ hr {
   border-left: 3px solid var(--border-color);
   padding: 24px 0px 24px 24px;
   display: flex;
-  margin-left: 4px;
+  margin-left: 0;
   transition: border-color var(--transition-base);
 }
 
@@ -535,7 +535,7 @@ hr {
   padding: 24px 0px 24px 24px;
   font-size: 16px;
   line-height: 1.8;
-  margin-left: 4px;
+  margin-left: 0;
   transition: border-color var(--transition-base);
 }
 
@@ -614,6 +614,22 @@ hr {
   display: flex;
   align-items: center;
   margin-bottom: 6px;
+  background: var(--glass-background);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--box-border-radius);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 4px 20px rgba(99, 102, 241, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: translateX(4px) translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.3);
 }
 
 .nav-icon {
@@ -625,16 +641,10 @@ hr {
   text-decoration: none;
   color: var(--foreground-color);
   padding: 12px 16px;
-  border-radius: var(--box-border-radius);
   display: inline-block;
   font-weight: 500;
   transition: all var(--transition-base);
   position: relative;
-  overflow: hidden;
-  background: var(--glass-background);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
 }
 
 .nav-link.current {
@@ -1163,16 +1173,12 @@ li:has(input[type='checkbox']:checked:disabled)::before {
   .nav-link:link,
   .nav-link:visited {
     padding: 8px 12px;
-    background: var(--glass-background);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
-    border-radius: 8px;
   }
 
   .nav-link:hover {
     transform: none;
     background: rgba(255, 255, 255, 0.6);
+    color: var(--highlight-color);
   }
 
   .section-title {
