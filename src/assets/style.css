@@ -54,7 +54,7 @@ body {
     Segoe UI Emoji,
     Segoe UI Symbol,
     Noto Color Emoji;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   background-attachment: fixed;
   min-height: 100vh;
 }
@@ -1207,19 +1207,19 @@ li:has(input[type='checkbox']:checked:disabled)::before {
   }
 
   .page-title {
-    padding: 8px;
+    padding: 12px 16px;
     font-size: 18px;
     background: var(--glass-background);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     border-radius: var(--box-border-radius);
     border: 1px solid var(--glass-border);
-    margin: 0 -4px 8px -4px;
+    margin-bottom: 12px;
   }
 
   .item {
-    margin: 0 -4px 8px -4px;
-    padding: 12px 16px;
+    margin-bottom: 12px;
+    padding: 16px;
     background: var(--glass-background);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
@@ -1228,8 +1228,8 @@ li:has(input[type='checkbox']:checked:disabled)::before {
   }
 
   #wrapper {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 12px;
+    margin-right: 12px;
   }
 
   #mobile-menu-toggle {
@@ -1242,16 +1242,16 @@ li:has(input[type='checkbox']:checked:disabled)::before {
 
 /* Dark Mode Theme - Slate Palette */
 html.dark {
-  --background-color: #0f172a;
+  --background-color: #0f0f1a;
   --foreground-color: #e2e8f0;
   --foreground-secondary-color: #94a3b8;
   --highlight-color: #818cf8;
   --highlight-color-hover: #6366f1;
   --border-color: rgba(148, 163, 184, 0.15);
-  --cell-background-color: #1e293b;
-  --code-background-color: #334155;
-  --shadows: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-  --shadows-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+  --cell-background-color: rgba(30, 41, 59, 0.7);
+  --code-background-color: rgba(51, 65, 85, 0.7);
+  --shadows: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadows-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
   --secondary-color: #94a3b8;
   --gradient-glow: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
 }
