@@ -38,6 +38,8 @@
 }
 
 body {
+  margin: 0px;
+  padding: 0px;
   color: var(--foreground-color);
   font-family:
     ui-sans-serif,
@@ -54,9 +56,22 @@ body {
     Segoe UI Emoji,
     Segoe UI Symbol,
     Noto Color Emoji;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  background-attachment: fixed;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #f9d423, #ff6b6b);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #wrapper {
@@ -75,9 +90,9 @@ body {
   right: 0;
   bottom: 0;
   background:
-    radial-gradient(ellipse at 20% 20%, rgba(102, 126, 234, 0.3) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(240, 147, 251, 0.3) 0%, transparent 50%),
-    radial-gradient(ellipse at 40% 60%, rgba(118, 75, 162, 0.2) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 30%, rgba(255, 182, 193, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(173, 216, 230, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 218, 185, 0.3) 0%, transparent 60%);
   pointer-events: none;
   z-index: -1;
 }
@@ -183,7 +198,7 @@ a.item-link:hover {
 
 #header {
   padding: 20px 24px;
-  margin-bottom: 24px;
+  margin: 0 0 24px 0;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -360,7 +375,7 @@ hr {
 
 .items {
   margin-top: 20px;
-  margin-left: 28px;
+  margin-left: 0;
 }
 
 .item {
@@ -1207,19 +1222,19 @@ li:has(input[type='checkbox']:checked:disabled)::before {
   }
 
   .page-title {
-    padding: 12px 16px;
+    padding: 8px;
     font-size: 18px;
     background: var(--glass-background);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     border-radius: var(--box-border-radius);
     border: 1px solid var(--glass-border);
-    margin-bottom: 12px;
+    margin: 0 -4px 8px -4px;
   }
 
   .item {
-    margin-bottom: 12px;
-    padding: 16px;
+    margin: 0 -4px 8px -4px;
+    padding: 12px 16px;
     background: var(--glass-background);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
@@ -1228,8 +1243,8 @@ li:has(input[type='checkbox']:checked:disabled)::before {
   }
 
   #wrapper {
-    margin-left: 12px;
-    margin-right: 12px;
+    margin-left: 16px;
+    margin-right: 16px;
   }
 
   #mobile-menu-toggle {
@@ -1242,16 +1257,16 @@ li:has(input[type='checkbox']:checked:disabled)::before {
 
 /* Dark Mode Theme - Slate Palette */
 html.dark {
-  --background-color: #0f0f1a;
+  --background-color: #0f172a;
   --foreground-color: #e2e8f0;
   --foreground-secondary-color: #94a3b8;
   --highlight-color: #818cf8;
   --highlight-color-hover: #6366f1;
   --border-color: rgba(148, 163, 184, 0.15);
-  --cell-background-color: rgba(30, 41, 59, 0.7);
-  --code-background-color: rgba(51, 65, 85, 0.7);
-  --shadows: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --shadows-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --cell-background-color: #1e293b;
+  --code-background-color: #334155;
+  --shadows: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadows-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
   --secondary-color: #94a3b8;
   --gradient-glow: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
 }
