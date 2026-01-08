@@ -2,6 +2,14 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+:root {
+  --glass-background: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-blur: blur(16px);
+  --highlight-color: #818cf8;
+  --box-border-radius: 12px;
+}
+
 html {
   scroll-behavior: smooth;
 }
